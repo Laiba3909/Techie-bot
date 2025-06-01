@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-
+port = int(os.environ.get("PORT", 8000))
 MODEL_NAME= 'gemini-2.0-flash'
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
