@@ -92,14 +92,14 @@ async def main(message: cl.Message):
     
     await cl.Message(content=result.final_output).send()
 
+app = cl.make_app()
+
 if __name__ == "__main__":
     import uvicorn
-    from chainlit.cli import run_chainlit
-    
+    print(f"🚀 Starting server on 0.0.0.0:{port}")
     uvicorn.run(
-        "chainlit.cli:app",
+        app,
         host="0.0.0.0",
         port=port,
-        reload=False,
-        workers=1
+        log_level="info"
     )
