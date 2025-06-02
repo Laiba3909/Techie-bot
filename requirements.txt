@@ -2,3 +2,4 @@ openai
 chainlit
 python-dotenv
 uvicorn
+google-generativeai
