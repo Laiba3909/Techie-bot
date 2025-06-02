@@ -92,4 +92,7 @@ async def main(message: cl.Message):
         return
     
     await cl.Message(content=result.final_output).send()
+    @cl.on_chat_start
+    async def start():
+       await cl.Message(content="Welcome! You can ask for code, recipes or general queries.").send()
 
